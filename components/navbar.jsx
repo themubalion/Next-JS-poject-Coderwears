@@ -23,11 +23,10 @@ const Navbar = () => {
   }
   return (
     <div>
-      <header className="text-gray-600 body-font">
+      <header className="text-gray-600 body-font shadow-md notSmall:h-14 items-center notSmall:pt-2">
         <div className="mx-auto w-full flex  justify-between items-center">
-          <Link href={'/'} className={'h-full'}><a className="flex items-center h-full hover:text-white text-red-500 mb-4 mediumScreen:mb-0">
-            {            // eslint-disable-next-line @next/next/no-img-element
-            }            <Image src={'/logo.png'} width={'150px'} height={'40px'} alt={'Logo Image'} className="mt-2" />
+          <Link href={'/'} className={'h-full border'}><a className="flex items-center h-full hover:text-white text-red-500">
+            <Image src={'/logo.png'} width={'180px'} height={'40px'} alt={'Logo Image'} className="mt-2" />
           </a></Link>
           <nav className=" flex ml-auto items-center text-base justify-end">
             <Link href={'/'}><a className="mr-5 hover:text-gray-900 mediumScreen:hidden ">Home</a></Link>
@@ -35,7 +34,7 @@ const Navbar = () => {
             <Link href={'contact'}><a className="mr-5 hover:text-gray-900 mediumScreen:hidden">Contact</a></Link>
             {/* Here we will add the products dropdown menu */}
             <div className="dropdown relative inline-block z-10 mediumScreen:hidden">
-              <button className="dropbtn pr-4"><div className='flex items-center'>Products <FaAngleDown/></div></button>
+              <button className="dropbtn pr-4"><div className='flex items-center'>Products <FaAngleDown /></div></button>
               <div className="hidden absolute min-w-[10rem] dropdown-content">
                 <Link href={'tshirts'}><a href="#" className='no-underline block py-3 px-4'>Tshirts</a></Link>
                 <Link href={'hoodies'}><a href="#" className='no-underline block py-3 px-4'>Hoodies</a></Link>
@@ -45,7 +44,7 @@ const Navbar = () => {
             </div>
             <Link href={'register'}><a className="mr-5 hover:text-gray-900"><button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded mediumScreen:hidden">Register/Login</button></a></Link>
             <Link href={'cart'}><a>
-              <button className="inline-flex items-center bg-gray-100 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mediumScreen:mt-0"><MdShoppingCart className='text-xl'/>
+              <button className="inline-flex items-center bg-gray-100 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mediumScreen:mt-0"><MdShoppingCart className='text-xl' />
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>

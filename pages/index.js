@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <div>
         <div className='relative'>
-          <section className='lg:max-w-[80vw] mx-auto'>
+          <section className=' mx-auto'>
             <Image src={'/banner.jpg'} alt={'Banner Image'} height={'10'} width={'20'} layout={'responsive'} />
           </section>
         </div>
