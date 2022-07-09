@@ -8,10 +8,14 @@ export default function Home() {
       <Head>
         <title>Coderwear.com</title>
         <meta name='description' content='coderwear.com - coding tshirts, hoodies and mugs' />
-        <link rel='icon' href='/favicon.ico'/>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <div>
-        Hello
+        <div className='relative'>
+          <section className='lg:max-w-[80vw] mx-auto'>
+            <Image src={'/banner.jpg'} alt={'Banner Image'} height={'10'} width={'20'} layout={'responsive'} />
+          </section>
+        </div>
       </div>
     </div>
   )

@@ -79,7 +79,7 @@ const Footer = () => {
 }        <img src="logo.png" width={'100px'} alt="" /></div>
       </a></Link> 
       <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 Coderwear —
-       <Link href={''}><a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@mubalion</a></Link> 
+       <Link href={''}><a href="https://twitter.com/mubashshirali95" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@mubalion</a></Link> 
       </p>
       <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
        <Link href={''}><a className="text-gray-500">

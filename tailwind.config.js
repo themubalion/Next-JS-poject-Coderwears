@@ -11,7 +11,8 @@ module.exports = {
         
       },
       screens: {
-        'md': {'max': '767px'},
+        'mediumScreen': {'max': '1072px'},
+        'notMedium': '1072px',
         'small': {'max': '650px'},
         'notSmall': '650px'
       }
