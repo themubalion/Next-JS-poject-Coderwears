@@ -10,10 +10,10 @@ export default function Home() {
         <meta name='description' content='coderwear.com - coding tshirts, hoodies and mugs' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div>
+      <div id='main'>
         <div className='relative'>
           <section className=' mx-auto'>
-            <Image src={'/banner.jpg'} alt={'Banner Image'} height={'10'} width={'20'} layout={'responsive'} />
+            <Image src={'/banner.jpg'} alt={'Banner Image'} height={'10'} width={'28'} layout={'responsive'} />
           </section>
         </div>
       </div>
