@@ -35,7 +35,7 @@ const Navbar = () => {
       document.getElementById("myCart").style.padding = "2rem";
     } else {
       document.getElementById("myCart").style.padding = "2rem";
-      document.getElementById("myCart").style.width = "30vw";
+      document.getElementById("myCart").style.width = "20vw";
     }
   }
   return (
@@ -97,17 +97,17 @@ const Navbar = () => {
               </div>
 
               <h2 className='font-bold text-black text-center'>Shopping Cart</h2>
-              <ol className='list-decimal'>
+              <ol className='list-decimal font-semibold'>
                 <li className='text-black my-2'>
                   <div className='flex'>
-                  <span className='w-2/3'>This is the first item</span>
-                  <span className='w-1/3'>1</span>
+                  <span className='w-2/3 font-semibold'>This is the first item</span>
+                  <span className='w-1/3 flex items-center justify-center font-semibold'>1</span>
                   </div>
                 </li>
                 <li className='text-black my-2'>
                   <div className='flex'>
-                  <span className='w-2/3'>This is the second item</span>
-                  <span className='w-1/3'>3</span>
+                  <span className='w-2/3 font-semibold'>This is the second item</span>
+                  <span className='w-1/3 flex items-center justify-center font-semibold'>3</span>
                   </div>
                 </li>
               </ol>
