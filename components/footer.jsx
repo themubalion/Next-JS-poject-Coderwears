@@ -15,27 +15,27 @@ const Footer = () => {
            <Link href={'/'}><a className="text-gray-600 hover:text-gray-800">Home</a></Link> 
           </li>
           <li>
-           <Link href={'about'}><a className="text-gray-600 hover:text-gray-800">About</a></Link> 
+           <Link href={'/about'}><a className="text-gray-600 hover:text-gray-800">About</a></Link> 
           </li>
           <li>
-           <Link href={'contact'}><a className="text-gray-600 hover:text-gray-800">Contact</a></Link> 
+           <Link href={'/contact'}><a className="text-gray-600 hover:text-gray-800">Contact</a></Link> 
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-semibold text-gray-900 tracking-widest text-sm mb-3">Products</h2>
+        <h2 className="title-font font-semibold text-gray-900 tracking-widest text-sm mb-3">product</h2>
         <nav className="list-none mb-10">
           <li>
-           <Link href={'tshirts'}><a className="text-gray-600 hover:text-gray-800">Coding Tshirts</a></Link> 
+           <Link href={'/tshirts'}><a className="text-gray-600 hover:text-gray-800">Coding Tshirts</a></Link> 
           </li>
           <li>
-           <Link href={'hoodies'}><a className="text-gray-600 hover:text-gray-800">Coding Hoodies</a></Link> 
+           <Link href={'/hoodies'}><a className="text-gray-600 hover:text-gray-800">Coding Hoodies</a></Link> 
           </li>
           <li>
-           <Link href={'mugs'}><a className="text-gray-600 hover:text-gray-800">Coding Coffee Mugs</a></Link> 
+           <Link href={'/mugs'}><a className="text-gray-600 hover:text-gray-800">Coding Coffee Mugs</a></Link> 
           </li>
           <li>
-           <Link href={'stickers'}><a className="text-gray-600 hover:text-gray-800">Coding Stickers</a></Link> 
+           <Link href={'/stickers'}><a className="text-gray-600 hover:text-gray-800">Coding Stickers</a></Link> 
           </li>
         </nav>
       </div>
@@ -43,16 +43,16 @@ const Footer = () => {
         <h2 className="title-font font-semibold text-gray-900 tracking-widest text-sm mb-3">Account</h2>
         <nav className="list-none mb-10">
           <li>
-           <Link href={'register'}><a className="text-gray-600 hover:text-gray-800">Register</a></Link> 
+           <Link href={'/register'}><a className="text-gray-600 hover:text-gray-800">Register</a></Link> 
           </li>
           <li>
-           <Link href={'login'}><a className="text-gray-600 hover:text-gray-800">Log In</a></Link> 
+           <Link href={'/login'}><a className="text-gray-600 hover:text-gray-800">Log In</a></Link> 
           </li>
           <li>
            <Link href={'#'}><a className="text-red-500 hover:text-red-600">Log out</a></Link> 
           </li>
           <li>
-           <Link href={'#'}><a className="text-red-500 hover:text-red-600">Delete Account</a></Link> 
+           <Link href={'#'}><a className="text-red-600 hover:text-red-700">Delete Account</a></Link> 
           </li>
         </nav>
       </div>
@@ -63,7 +63,7 @@ const Footer = () => {
             <label htmlFor="footer-field" className="leading-7 text-sm text-gray-600">Query</label>
             <input type="text" id="footer-field" name="footer-field" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
           </div>
-          <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Submit</button>
+          <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">Submit</button>
         </div>
         <p className="text-gray-500 text-sm mt-2 md:text-left text-center">If you have any Question related to our
           <br className="lg:block hidden" />webpage you can just send it here.
