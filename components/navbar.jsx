@@ -1,4 +1,6 @@
 // The navbar is copied from tailblocks cus I am not going to design this page this is the process of learning the development using next js so to save time I am using templates here, and I already know css and tailwind css.
+
+// Fixed the logo file format
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
