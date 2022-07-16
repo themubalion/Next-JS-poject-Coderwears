@@ -11,7 +11,7 @@ const Slug = () => {
   const router = useRouter()
   const { slug } = router.query
   const [Color, setColor] = useState('')
-  const [service, setservice] = useState(false)
+  const [service, setservice] = useState()
 
   const favColour = () => {
     if (Color === '') {
