@@ -49,7 +49,7 @@ const Navbar = () => {
         <div id='main' className=' transition-all delay-300'>
         <div className="mx-auto w-full flex  justify-between items-center">
           <Link href={'/'} className={'h-full border'}><a className="flex items-center h-full text-red-500 ml-2">
-            <Image src={'/logo.png'} width={'180px'} height={'40px'} alt={'Logo Image'} className="mt-2" />
+            <Image src={'/logo.png'} width={'220px'} height={'30px'} alt={'Logo Image'} className="mt-2" />
           </a></Link>
           <nav className=" flex ml-auto items-center text-base justify-end">
             <Link href={'/'}><a className="mr-5 hover:text-red-500 mediumScreen:hidden ">Home</a></Link>
