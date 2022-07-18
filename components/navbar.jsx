@@ -97,7 +97,7 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
           <div className=''>
             <div id="myCart" className="cart h-full w-0 fixed right-0 top-0 z-10 overflow-x-auto transition-all delay-[200ms] bg-red-100">
 
-              <div href="" className='my-2 block cursor-pointer ml-8 transition delay-300 font-medium absolute top-1 right-3' onClick={closeCart} >
+              <div href="" className='my-2 block cursor-pointer ml-8 transition delay-300 font-medium absolute top-1 right-3' tabIndex={0} id={'close-cart'} onClick={closeCart} >
                 <AiFillCloseCircle className='text-2xl text-red-500' />
               </div>
 
