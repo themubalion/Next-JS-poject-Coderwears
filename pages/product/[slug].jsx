@@ -1,17 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { useRouter } from 'next/router'
 import {
   MdFavoriteBorder,
   MdFavorite
 } from 'react-icons/md'
+import Link from 'next/link'
 
 const Slug = ({addToCart}) => {
 
+  const [size, setsize] = useState('M')
   const [Pin, setpin] = useState()
   const router = useRouter()
   const { slug } = router.query
   const [Color, setColor] = useState('')
   const [service, setservice] = useState()
+
+  const changeSize = async(e) => {
+    setsize(e.target.value)
+  }
+
+  useEffect(() => {
+    if(size!=''){
+      console.log(size)
+    }else{return}
+  }, [size])
+  
 
   const favColour = () => {
     if (Color === '') {
@@ -83,7 +96,7 @@ const Slug = ({addToCart}) => {
                   </a>
                 </span>
               </div>
-              <p className="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+              <p className="leading-relaxed">This is the product page that uses dynamic Routing. I access the product information through the backened and show it to the dynamic pages. This helps in stopping hard code which can be easy but time taking to make, as well as very frustating to modify.The below is the Add to Cart button that I finished on 18/07/2022 it works like a charm. You can also see the pincode verification box that helps in finding out whether its in the service or not, to see available pincodes to test <Link href={'/api/pincode'}><a className='text-blue-500 underline hover:text-blue-700 visited:text-blue-800'>click here.</a></Link> </p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>
@@ -94,7 +107,7 @@ const Slug = ({addToCart}) => {
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base pl-3 pr-10">
+                    <select value={size} onChange={changeSize} className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base pl-3 pr-10">
                       <option>SM</option>
                       <option>M</option>
                       <option>L</option>
@@ -111,7 +124,7 @@ const Slug = ({addToCart}) => {
               <div className="inline-flex notSmall:space-x-4 small:flex-col small:space-y-4">
                 <span className="title-font font-medium text-2xl text-gray-900">₹599</span>
                 <div className='flex space-x-4'>
-                  <button onClick={()=>{addToCart(slug,1,599,'Black Hoodie','Medium','Black')}} className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Add to Cart</button>
+                  <button onClick={()=>{addToCart(slug,1,599,'Black Hoodie',size,'Black')}} className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Add to Cart</button>
                   <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Buy Now</button>
                   <button id='favourite' onClick={favColour} className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                     <div className={Color}><MdFavorite /></div>

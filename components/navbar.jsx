@@ -62,7 +62,7 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
                   <Link href={'/tshirts'}><a href="#" className='no-underline block py-3 px-4 hover:text-red-500'>Tshirts</a></Link>
                   <Link href={'/hoodies'}><a href="#" className='no-underline block py-3 px-4 hover:text-red-500'>Hoodies</a></Link>
                   <Link href={'/mugs'}><a href="#" className='no-underline block py-3 px-4 hover:text-red-500'>Mugs</a></Link>
-                  <Link href={'stickers'}><a href="#" className='no-underline block py-3 px-4 hover:text-red-500'>Stickers</a></Link>
+                  <Link href={'/stickers'}><a href="#" className='no-underline block py-3 px-4 hover:text-red-500'>Stickers</a></Link>
                 </div>
               </div>
               <Link href={'/register'}><a className="mr-5 hover:text-red-500"><button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded mediumScreen:hidden">Login</button></a></Link>
@@ -107,7 +107,7 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
                   let cartArray = Cart[k]
                   return <li className='text-black my-2' key={k}>
                       <div className='flex'>
-                        <span className='w-2/3 font-semibold'>{cartArray.name}</span>
+                        <span className='w-2/3 font-semibold'>{cartArray.name}[{cartArray.size}]</span>
                         <span className='w-1/3 flex items-center justify-center font-semibold'><AiFillMinusCircle onClick={() => {removeFromCart(k,cartArray.qty,cartArray.price,cartArray.name,cartArray.size,cartArray.variant)}} className='mx-1 text-red-500 text-lg cursor-pointer' /> {cartArray.qty} <AiFillPlusCircle onClick={() => {addToCart(k,cartArray.qty,cartArray.price,cartArray.name,cartArray.size,cartArray.variant)}} className='mx-1 text-red-500 text-lg cursor-pointer' /></span>
                       </div>
                     </li>

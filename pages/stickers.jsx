@@ -10,7 +10,7 @@ const Stickers = () => {
           <div className="flex flex-wrap -m-4">
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
-                <div className='bg-gray-100'><picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture></div>
+                <div className='bg-gray-100'><picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture></div>
               </a></Link>
               <div className="mt-4">
                 <h3 className="text-gray-500 text-sm tracking-widest title-font mb-1">T-shirts</h3>
@@ -28,7 +28,7 @@ const Stickers = () => {
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
                 <div className='bg-gray-100'>
-                  <picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture>
+                  <picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture>
                 </div>
               </a></Link>
               <div className="mt-4">
@@ -48,7 +48,7 @@ const Stickers = () => {
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
                 <div className='bg-gray-100'>
-                  <picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture>
+                  <picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture>
                 </div>
               </a></Link>
               <div className="mt-4">
@@ -67,7 +67,7 @@ const Stickers = () => {
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
                 <div className='bg-gray-100'>
-                  <picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture>
+                  <picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture>
                 </div>
               </a></Link>
               <div className="mt-4">
@@ -86,7 +86,7 @@ const Stickers = () => {
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
                 <div className='bg-gray-100'>
-                  <picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture>
+                  <picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture>
                 </div>
               </a></Link>
               <div className="mt-4">
@@ -105,7 +105,7 @@ const Stickers = () => {
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
                 <div className='bg-gray-100'>
-                  <picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture>
+                  <picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture>
                 </div>
               </a></Link>
               <div className="mt-4">
@@ -123,7 +123,7 @@ const Stickers = () => {
             </div>
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
-                <div className='bg-gray-100'><picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture></div>
+                <div className='bg-gray-100'><picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture></div>
               </a></Link>
               <div className="mt-4">
                 <h3 className="text-gray-500 text-sm tracking-widest title-font mb-1">T-shirts</h3>
@@ -140,7 +140,7 @@ const Stickers = () => {
             </div>
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <Link href={'/product/tshirt'}><a className={anchorStyle}>
-                <picture ><img className="h-72" alt='tshirt image' src="dummyTshirt.png" /></picture>
+                <picture ><img className="h-72" alt='tshirt image' src="https://m.media-amazon.com/images/I/61REp+sCtNL._AC_SS450_.jpg" /></picture>
               </a></Link>
               <div className="mt-4">
                 <h3 className="text-gray-500 text-sm tracking-widest title-font mb-1">T-shirts</h3>
