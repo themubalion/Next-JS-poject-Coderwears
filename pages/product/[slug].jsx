@@ -110,7 +110,7 @@ const Slug = () => {
                 </div>
               </div>
               <div className="inline-flex notSmall:space-x-4 small:flex-col small:space-y-4">
-                <span className="title-font font-medium text-2xl text-gray-900">₹58.00</span>
+                <span className="title-font font-medium text-2xl text-gray-900">₹599</span>
                 <div className='flex space-x-4'>
                   <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded ">Add to Cart</button>
                   <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Buy Now</button>

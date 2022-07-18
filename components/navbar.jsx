@@ -49,7 +49,7 @@ const Navbar = () => {
         <div id='main' className=' transition-all delay-300'>
         <div className="mx-auto w-full flex  justify-between items-center">
           <Link href={'/'} className={'h-full border'}><a className="flex items-center h-full text-red-500 ml-2">
-            <Image src={'/logo.png'} width={'220px'} height={'30px'} alt={'Logo Image'} className="mt-2" />
+            <Image src={'/logo.png'} width={'180px'} height={'25px'} alt={'Logo Image'} className="mt-2" />
           </a></Link>
           <nav className=" flex ml-auto items-center text-base justify-end">
             <Link href={'/'}><a className="mr-5 hover:text-red-500 mediumScreen:hidden ">Home</a></Link>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <Link href={'stickers'}><a href="#" className='no-underline block py-3 px-4 hover:text-red-500'>Stickers</a></Link>
               </div>
             </div>
-            <Link href={'/register'}><a className="mr-5 hover:text-red-500"><button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded mediumScreen:hidden">Register/Login</button></a></Link>
+            <Link href={'/register'}><a className="mr-5 hover:text-red-500"><button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded mediumScreen:hidden">Login</button></a></Link>
             <div onClick={openCart}><a>
               <button className="inline-flex items-center bg-gray-100 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mediumScreen:mt-0"><MdShoppingCart className='text-xl' />
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
