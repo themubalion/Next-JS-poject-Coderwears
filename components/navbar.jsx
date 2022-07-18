@@ -21,8 +21,7 @@ import {
 } from 'react-icons/io5'
 
 
-const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal }) => {
-  console.log(Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal)
+const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal,slug }) => {
   const closeNav = () => {
     document.getElementById("mySidenav").style.width = "0";
   }
@@ -39,7 +38,7 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
   const openCart = () => {
     document.getElementById("myCart").style.padding = "2rem";
     if (screen.width < 720) {
-      document.getElementById("myCart").style.width = "60vw";
+      document.getElementById("myCart").style.width = "75vw";
     } else {
       document.getElementById("myCart").style.width = "22vw";
     }
@@ -96,7 +95,7 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
             </div>
           </div>
           <div className=''>
-            <div id="myCart" className="cart h-full w-0 fixed right-0 top-0 z-10 overflow-x-hidden transition-all delay-[200ms] bg-red-100">
+            <div id="myCart" className="cart h-full w-0 fixed right-0 top-0 z-10 overflow-x-auto transition-all delay-[200ms] bg-red-100">
 
               <div href="" className='my-2 block cursor-pointer ml-8 transition delay-300 font-medium absolute top-1 right-3' onClick={closeCart} >
                 <AiFillCloseCircle className='text-2xl text-red-500' />
@@ -105,16 +104,17 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
               <h2 className='font-bold text-black text-center text-xl my-2 mb-4'>Shopping Cart</h2>
               {Object.keys(Cart).length != 0 && <ol className='list-decimal font-semibold'>
                 {Object.keys(Cart).map((k) => {
+                  let cartArray = Cart[k]
                   return <li className='text-black my-2' key={k}>
                       <div className='flex'>
-                        <span className='w-2/3 font-semibold'>{Cart[k].name}</span>
-                        <span className='w-1/3 flex items-center justify-center font-semibold'><AiFillMinusCircle onClick={removeFromCart} className='mx-1 text-red-500 text-lg cursor-pointer' /> {Cart[k].qty} <AiFillPlusCircle onClick={addToCart} className='mx-1 text-red-500 text-lg cursor-pointer' /></span>
+                        <span className='w-2/3 font-semibold'>{cartArray.name}</span>
+                        <span className='w-1/3 flex items-center justify-center font-semibold'><AiFillMinusCircle onClick={() => {removeFromCart(k,cartArray.qty,cartArray.price,cartArray.name,cartArray.size,cartArray.variant)}} className='mx-1 text-red-500 text-lg cursor-pointer' /> {cartArray.qty} <AiFillPlusCircle onClick={() => {addToCart(k,cartArray.qty,cartArray.price,cartArray.name,cartArray.size,cartArray.variant)}} className='mx-1 text-red-500 text-lg cursor-pointer' /></span>
                       </div>
                     </li>
                 })
                 }
               </ol>}
-              {Cart = {} && <div className='font-semibold text-black'>
+              {Cart = {} && <div className='font-semibold text-black my-2'>
                 Your cart is empty
                 </div>}
               <div className='font-bold text-black my-2'>

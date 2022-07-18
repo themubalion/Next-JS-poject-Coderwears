@@ -4,10 +4,14 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
+
+  const router = useRouter()
+  const { slug } = router.query
   const [Cart, setCart] = useState({})
   const [subTotal, setsubTotal] = useState(0)
 
@@ -22,9 +26,8 @@ function MyApp({ Component, pageProps }) {
     }
   }, [])
   
-
   const saveCart = (newCart) =>{
-    localStorage.setItem("cart",newCart)
+    localStorage.setItem("cart",JSON.stringify(newCart))
     let subt = 0;
     let keys = Object.keys(Cart)
     for (let i = 0; i < keys.length; i++) {
@@ -42,7 +45,7 @@ function MyApp({ Component, pageProps }) {
   const addToCart = (productId,qty,price,name,size,variant) => {
     let myCart = Cart
     if (productId in Cart){
-      myCart[productId].qty = Cart[productId].qty + qty;
+      myCart[productId].qty = Cart[productId].qty + 1;
     }
     else {
       myCart[productId] = {qty:1,price,name,size,variant}
@@ -54,7 +57,7 @@ function MyApp({ Component, pageProps }) {
   const removeFromCart = (productId,qty,price,name,size,variant) => {
     let myCart = Cart
     if (productId in Cart){
-      myCart[productId].qty = Cart[productId].qty - qty;
+      myCart[productId].qty = Cart[productId].qty - 1;
     }
     if(myCart[productId].qty <= 0) {
       delete myCart[productId]
@@ -67,7 +70,7 @@ function MyApp({ Component, pageProps }) {
     <Navbar Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} />
     <div>
       <div className='min-h-screen'>
-      <Component Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} {...pageProps} />
+      <Component Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} slug={slug} {...pageProps} />
       </div>
       <Footer />
     </div>
