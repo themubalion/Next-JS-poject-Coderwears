@@ -18,13 +18,14 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     try {
       if (localStorage.getItem('cart')) {
-        setCart(JSON.parse(localStorage.getItem('cart')))
+        let myCart = JSON.parse(localStorage.getItem('cart'))
         let subt = 0;
-        let keys = Object.keys(JSON.parse(localStorage.getItem('cart')))
+        let keys = Object.keys(myCart)
         for (let i = 0; i < keys.length; i++) {
-          subt += Cart[keys[i]].price * Cart[keys[i]].qty
+          subt += myCart[keys[i]].price * myCart[keys[i]].qty
         }
         setsubTotal(subt)
+        setCart(myCart)
       }
     } catch (err) {
       console.error(err)
@@ -33,14 +34,6 @@ function MyApp({ Component, pageProps }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const getCart = () => {
-    let subt = 0;
-    let keys = Object.keys(Cart)
-    for (let i = 0; i < keys.length; i++) {
-      subt += Cart[keys[i]].price * Cart[keys[i]].qty
-    }
-    setsubTotal = subt
-  }
 
   const saveCart = (newCart) => {
     localStorage.setItem("cart", JSON.stringify(newCart))
@@ -86,7 +79,7 @@ function MyApp({ Component, pageProps }) {
     <Navbar Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} />
     <div>
       <div className='min-h-screen'>
-        <Component Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} slug={slug} getCart={getCart} {...pageProps} />
+        <Component Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} slug={slug}  {...pageProps} />
       </div>
       <Footer />
     </div>

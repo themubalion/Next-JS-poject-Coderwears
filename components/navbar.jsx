@@ -45,7 +45,7 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
   }
   return (
     <div>
-      <header className="text-gray-600 bg-white body-font shadow-md notSmall:h-14 items-center notSmall:pt-2 sticky z-10 w-full">
+      <header className="text-gray-600 bg-white body-font shadow-md small:py-1 notSmall:h-14 items-center notSmall:pt-2 sticky z-10 w-full">
         <div id='main' className=' transition-all delay-300'>
           <div className="mx-auto w-full flex  justify-between items-center ">
             <Link href={'/'} className={'h-full border'}><a className="flex items-center h-full text-red-500 ml-2">

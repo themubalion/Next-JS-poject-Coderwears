@@ -21,7 +21,6 @@ const Slug = ({addToCart}) => {
 
   useEffect(() => {
     if(size!=''){
-      console.log(size)
     }else{return}
   }, [size])
   

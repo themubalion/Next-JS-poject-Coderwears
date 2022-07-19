@@ -18,7 +18,7 @@ const Checkout = ({ Cart, subTotal,addToCart,removeFromCart }) => {
     <div className='container px-4'>
       <h1 className='font-bold text-3xl text-center my-8'>Checkout</h1>
       <h2 className='font-semibold text-xl  my-2'>1-Delivery Details</h2>
-      <div className='mx-auto grid grid-cols-2 grid-flow-row  gap-x-4 gap-y-2'>
+      <div className='mx-auto grid lg:grid-cols-2 small:grid-cols-none grid-flow-row  gap-x-4 gap-y-2'>
         <div className=' w-full'>
           <div className="mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
