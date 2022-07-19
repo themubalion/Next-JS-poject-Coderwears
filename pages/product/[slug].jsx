@@ -52,7 +52,7 @@ const Slug = ({addToCart}) => {
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 py-16 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             {      // eslint-disable-next-line @next/next/no-img-element
             }      <img alt="ecommerce" className="lg:w-1/2 lg:h-auto h-64 w-auto mx-auto rounded" src="/dummyHoodie.png" />

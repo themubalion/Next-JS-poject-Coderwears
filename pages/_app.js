@@ -17,21 +17,37 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     try {
-      if(localStorage.getItem('cart')){
+      if (localStorage.getItem('cart')) {
         setCart(JSON.parse(localStorage.getItem('cart')))
+        let subt = 0;
+        let keys = Object.keys(JSON.parse(localStorage.getItem('cart')))
+        for (let i = 0; i < keys.length; i++) {
+          subt += Cart[keys[i]].price * Cart[keys[i]].qty
+        }
+        setsubTotal(subt)
       }
     } catch (err) {
       console.error(err)
       localStorage.clear()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  
-  const saveCart = (newCart) =>{
-    localStorage.setItem("cart",JSON.stringify(newCart))
+
+  const getCart = () => {
     let subt = 0;
     let keys = Object.keys(Cart)
     for (let i = 0; i < keys.length; i++) {
-      subt += Cart[keys[i]].price *  Cart[keys[i]].qty
+      subt += Cart[keys[i]].price * Cart[keys[i]].qty
+    }
+    setsubTotal = subt
+  }
+
+  const saveCart = (newCart) => {
+    localStorage.setItem("cart", JSON.stringify(newCart))
+    let subt = 0;
+    let keys = Object.keys(Cart)
+    for (let i = 0; i < keys.length; i++) {
+      subt += Cart[keys[i]].price * Cart[keys[i]].qty
     }
     setsubTotal(subt)
   }
@@ -41,25 +57,25 @@ function MyApp({ Component, pageProps }) {
     saveCart({})
     alert('Cart has been cleared')
   }
-  
-  const addToCart = (productId,qty,price,name,size,variant) => {
+
+  const addToCart = (productId, qty, price, name, size, variant) => {
     let myCart = Cart
-    if (productId in Cart){
+    if (productId in Cart) {
       myCart[productId].qty = Cart[productId].qty + 1;
     }
     else {
-      myCart[productId] = {qty:1,price,name,size,variant}
+      myCart[productId] = { qty: 1, price, name, size, variant }
     }
     setCart(myCart)
     saveCart(Cart)
   }
 
-  const removeFromCart = (productId,qty,price,name,size,variant) => {
+  const removeFromCart = (productId, qty, price, name, size, variant) => {
     let myCart = Cart
-    if (productId in Cart){
+    if (productId in Cart) {
       myCart[productId].qty = Cart[productId].qty - 1;
     }
-    if(myCart[productId].qty <= 0) {
+    if (myCart[productId].qty <= 0) {
       delete myCart[productId]
     }
     setCart(myCart)
@@ -70,7 +86,7 @@ function MyApp({ Component, pageProps }) {
     <Navbar Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} />
     <div>
       <div className='min-h-screen'>
-      <Component Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} slug={slug} {...pageProps} />
+        <Component Cart={Cart} addToCart={addToCart} removeFromCart={removeFromCart} saveCart={saveCart} setCart={setCart} clearCart={clearCart} subTotal={subTotal} slug={slug} getCart={getCart} {...pageProps} />
       </div>
       <Footer />
     </div>

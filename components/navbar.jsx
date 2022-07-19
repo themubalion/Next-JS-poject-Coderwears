@@ -45,9 +45,9 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
   }
   return (
     <div>
-      <header className="text-gray-600 body-font shadow-md notSmall:h-14 items-center notSmall:pt-2">
+      <header className="text-gray-600 bg-white body-font shadow-md notSmall:h-14 items-center notSmall:pt-2 sticky z-10 w-full">
         <div id='main' className=' transition-all delay-300'>
-          <div className="mx-auto w-full flex  justify-between items-center">
+          <div className="mx-auto w-full flex  justify-between items-center ">
             <Link href={'/'} className={'h-full border'}><a className="flex items-center h-full text-red-500 ml-2">
               <Image src={'/logo.png'} width={'180px'} height={'25px'} alt={'Logo Image'} className="mt-2" />
             </a></Link>
@@ -95,7 +95,7 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
             </div>
           </div>
           <div className=''>
-            <div id="myCart" className="cart h-full w-0 fixed right-0 top-0 z-10 overflow-x-auto transition-all delay-[200ms] bg-red-100">
+            <div id="myCart" className="cart h-full w-0 fixed right-0 top-0 z-10 overflow-x-hidden transition-all delay-[200ms] bg-red-100">
 
               <div href="" className='my-2 block cursor-pointer ml-8 transition delay-300 font-medium absolute top-1 right-3' tabIndex={0} id={'close-cart'} onClick={closeCart} >
                 <AiFillCloseCircle className='text-2xl text-red-500' />
@@ -120,8 +120,8 @@ const Navbar = ({ Cart, addToCart, removeFromCart, clearCart, saveCart, subTotal
               <div className='font-bold text-black my-2'>
                 Subtotal: ₹{subTotal}
               </div>
-              <div className="flex justify-start space-x-2">
-                <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded"><IoBagCheckOutline className='my-auto' /> Checkout</button>
+              <div className="flex w-full justify-start space-x-2">
+                <button onClick={closeCart} className="lg:mt-2 xl:mt-0 flex text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded"><Link href={'/checkout'}><a className='flex '><IoBagCheckOutline className='my-auto' /><div> Checkout</div></a></Link></button>
                 <button onClick={clearCart} className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">Clear Cart</button>
               </div>
             </div>
